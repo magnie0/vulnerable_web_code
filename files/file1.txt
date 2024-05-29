@@ -1,0 +1,3 @@
+This file is boooooooring
+But it shows something
+It shows some clue of how file is opened look in the search bar

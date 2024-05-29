@@ -1,0 +1,2 @@
+Clue use: curl --path-as-is
+What about moving around directories? ../../../ :))

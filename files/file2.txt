@@ -1,0 +1,3 @@
+Server is using linux.
+It is known that linux saves info about users in /etc/passwd
+The flag is in name of user
