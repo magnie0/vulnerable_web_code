@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section"></div>
+    <h1>Vulnerable Page</h1>
+    <h3> No flag here, only for showing possibility of running javascripts </h3>
+    <form method="post">
+        <label for="user_input">Enter some text:</label>
+        <input type="text" id="user_input" name="user_input">
+        <button type="submit">Submit</button>
+    </form>
+
+</div>
+{% endblock content %}

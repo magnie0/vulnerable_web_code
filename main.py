@@ -1,4 +1,4 @@
-from flask import Flask, request, send_from_directory, render_template, abort, flash
+from flask import Flask, request, send_from_directory, render_template, render_template_string, abort, flash
 import os
 import mysql.connector
 app = Flask(__name__, static_url_path = "/images", static_folder = "images")
@@ -16,6 +16,17 @@ def chall1():
 @app.route('/challenge2')
 def chall2():
     return render_template('challenge2.html')
+
+
+
+
+@app.route('/challenge3', methods=['GET', 'POST'])
+def chall3():
+    user_input = None
+    if request.method == 'POST':
+        user_input = request.form.get('user_input', '')
+        return '<html><body><h1>Result:</h1><p>' + user_input + '</p><a href="/challenge3">Go Back to writing data</a></body></html>'
+    return render_template('challenge3.html')
 
 @app.route('/files/<path:filename>', methods=['GET'])
 def download_file(filename):
